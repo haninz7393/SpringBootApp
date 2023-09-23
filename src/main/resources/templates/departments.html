@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Department</title>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <th>Department ID</th>
+        <th>Department Name</th>
+        <th>Department branch</th>
+        <th>Department position</th>
+      </tr>
+      <tr th:each="dept:${departments}">
+        <td th:text="${dept.departmentId}">10000</td>
+        <td th:text="${dept.name}">Sol ze</td>
+        <td th:text="${dept.branch}">Haifa</td>
+        <td th:text="${dept.position}">IL</td>
+      </tr>
+    </table>
+  </body>
+</html>
